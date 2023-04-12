@@ -57,8 +57,21 @@ output.elasticsearch:
 
 filebeat modules list
 filebeat modules enable nginx
+```
+
+## Install Kibana
+
+```
+sudo yum install kibana 
+sudo /bin/systemctl daemon-reload
+sudo /bin/systemctl enable kibana.service
+sudo systemctl start kibana.service
+sudo systemctl stop kibana.service
+
+Kibana loads its configuration from the /etc/kibana/kibana.yml file by default.
 
 
+Point your web browser to the machine where you are running Kibana and specify the port number. For example, localhost:5601 or http://YOURDOMAIN.com:5601.
 
 
 ```
